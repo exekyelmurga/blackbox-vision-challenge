@@ -1,13 +1,19 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import LoadingPage from "./App/components/LoadingPage";
+import GameOverPage from "./App/components/GameOverPage";
+import MainGame from "./App/App"; // Este será el componente principal del juego
 
-import App from "./App";
+const App: React.FC = () => {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<MainGame />} />
+        <Route path="/loading" element={<LoadingPage />} />
+        <Route path="/game-over" element={<GameOverPage />} />
+      </Routes>
+    </Router>
+  );
+};
 
-import "./theme.css";
-
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById("root"),
-);
+export default App;
