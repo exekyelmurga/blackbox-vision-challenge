@@ -1,0 +1,25 @@
+.container {
+    display: flex;
+    flex-direction: column;
+
+}
+
+section {
+    display: block;
+    background-color: bisque;
+    padding: 130px;
+}
+
+header {
+    display: block;
+    background-color: #f0f0f0;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+footer {
+    display: block;
+    background-color: #f0f0f0;
+    padding: 20px;
+    margin-top: 20px;
+}

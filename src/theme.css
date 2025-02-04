@@ -1,6 +1,7 @@
 :root {
   --primary: #44D1B3;
   --red: #E94F4E;
+  --friendly-color: #0d3b2fbd;
 }
 
 body {
@@ -14,7 +15,7 @@ body {
 
 #root {
   text-align: center;
-  background-color: white;
+  background-color: var(--friendly-color);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
