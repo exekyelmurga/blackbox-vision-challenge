@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useMemo } from "react";
 import styles from "./App.module.scss";
 import Button from "./components/button";
-import TriviaQuestionCard from "./components/triviaQuestion";
+import TriviaQuestionCard from "./components/TriviaQuestion";
 import api from "./api";
 import { Trivia } from "./types";
 
