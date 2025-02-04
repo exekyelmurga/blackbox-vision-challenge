@@ -1,8 +1,16 @@
-import * as React  from 'react';
-import styles from './Button.module.css';
+import React from "react";
+import styles from "./Button.module.css";
 
-const Button: React.FC<React.ButtonHTMLAttributes<HTMLButtonElement>> = ({children, ...props}) => {
-    return <button className={styles.container} {...props}>{children} </button>;
-}
+const Button: React.FC<React.ButtonHTMLAttributes<HTMLButtonElement>> = ({
+  children,
+  className,
+  ...props
+}) => {
+  return (
+    <button className={`${styles.container} ${className || ""}`} {...props}>
+      {children}
+    </button>
+  );
+};
 
 export default Button;
