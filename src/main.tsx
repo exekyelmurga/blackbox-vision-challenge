@@ -1,19 +1,16 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import LoadingPage from "./App/components/LoadingPage";
-import GameOverPage from "./App/components/GameOverPage";
-import MainGame from "./App/App"; // Este será el componente principal del juego
+import ReactDOM from "react-dom/client";
+import { BrowserRouter } from "react-router-dom"; // Asegúrate de que se ha importado correctamente
+import App from "./App";
+import "./theme.css";
 
-const App: React.FC = () => {
-  return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<MainGame />} />
-        <Route path="/loading" element={<LoadingPage />} />
-        <Route path="/game-over" element={<GameOverPage />} />
-      </Routes>
-    </Router>
-  );
-};
+// Crear el root con createRoot
+const root = ReactDOM.createRoot(document.getElementById("root")!);
 
-export default App;
+root.render(
+  <React.StrictMode>
+    <BrowserRouter> {/* Asegúrate de que BrowserRouter está envolviendo a tu aplicación */}
+      <App />
+    </BrowserRouter>
+  </React.StrictMode>
+);
